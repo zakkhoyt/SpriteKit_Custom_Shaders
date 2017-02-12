@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C65603211E50229200D63793 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C65603201E50229200D63793 /* README.md */; };
 		C66B726E1E50021000AC8D54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B726D1E50021000AC8D54 /* AppDelegate.swift */; };
 		C66B72701E50021000AC8D54 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C66B726F1E50021000AC8D54 /* GameScene.sks */; };
 		C66B72721E50021000AC8D54 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C66B72711E50021000AC8D54 /* Actions.sks */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C65603201E50229200D63793 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C66B726A1E50021000AC8D54 /* SpriteShader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteShader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66B726D1E50021000AC8D54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C66B726F1E50021000AC8D54 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 		C66B72611E50021000AC8D54 = {
 			isa = PBXGroup;
 			children = (
+				C65603201E50229200D63793 /* README.md */,
 				C66B726C1E50021000AC8D54 /* SpriteShader */,
 				C66B726B1E50021000AC8D54 /* Products */,
 			);
@@ -143,7 +146,6 @@
 				TargetAttributes = {
 					C66B72691E50021000AC8D54 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = J7U74N85YF;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -190,6 +192,7 @@
 			files = (
 				C66B72741E50021000AC8D54 /* GameScene.swift in Sources */,
 				C66B72761E50021000AC8D54 /* GameViewController.swift in Sources */,
+				C65603211E50229200D63793 /* README.md in Sources */,
 				C66B726E1E50021000AC8D54 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,8 +318,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J7U74N85YF;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SpriteShader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.SpriteShader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -329,8 +333,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J7U74N85YF;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SpriteShader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.SpriteShader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -358,6 +363,7 @@
 				C66B72841E50021000AC8D54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

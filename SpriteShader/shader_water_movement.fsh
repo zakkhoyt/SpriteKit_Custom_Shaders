@@ -1,7 +1,6 @@
 void main(void)
 {
     vec2 uv = gl_FragCoord.xy / size.xy;
-    //	uv.y = -uv.y;
     
     uv.y += (cos((uv.y + (u_time * 0.08)) * 85.0) * 0.0019) +
     (cos((uv.y + (u_time * 0.1)) * 10.0) * 0.002);

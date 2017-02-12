@@ -15,20 +15,36 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /* Original Xcode snipped to load the scene from the sks file */
+//        if let view = self.view as! SKView? {
+//            // Load the SKScene from 'GameScene.sks'
+//            if let scene = SKScene(fileNamed: "GameScene") {
+//                // Set the scale mode to scale to fit the window
+//                scene.scaleMode = .aspectFill
+//                
+//                // Present the scene
+//                view.presentScene(scene)
+//            }
+//            
+//            view.ignoresSiblingOrder = true
+//            
+//            view.showsFPS = true
+//            view.showsNodeCount = true
+//        }
+        
+        /* We can create the scene programmatically (using exact size) so that there is no scaling necessary */
         if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
+            // Create programmatically
+            let scene = GameScene(size: view.bounds.size)
             
+            // Set the scale mode to scale to fit the window
+            scene.scaleMode = .aspectFill
+            
+            // Present the scene
             view.ignoresSiblingOrder = true
-            
             view.showsFPS = true
             view.showsNodeCount = true
+            view.presentScene(scene)
         }
     }
 

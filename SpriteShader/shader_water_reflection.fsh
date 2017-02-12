@@ -3,6 +3,7 @@ void main( void )
 {
     float time = u_time * .5;
     vec2 sp = gl_FragCoord.xy / size.xy;
+    
     vec2 p = sp * 6.0 - 20.0;
     vec2 i = p;
     float c = 1.0;

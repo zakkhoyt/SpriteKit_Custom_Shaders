@@ -14,18 +14,22 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
 
+        // Shader work with pixels, not points like we are used to on iOS. Store scale for use below.
+        let scale = UIScreen.main.scale
+        
         // Setup a container sprite for the shader that makes the movement
+        // We are using an empty image in a sprite node because sprite nodes allow you to specify size, and shader.
         let moveNode = SKSpriteNode(imageNamed: "dummypixel")
         moveNode.position = CGPoint(x: frame.midX, y: frame.midY)
         moveNode.size = frame.size
         addChild(moveNode)
         // Create the shader from a shader-file
         let moveShader = SKShader(fileNamed: "shader_water_movement.fsh")
-        // Set vairiables that are used in the shader script
+        // Set variables that are used in the shader script
         moveShader.uniforms = [
             SKUniform(
                 name: "size",
-                vectorFloat3: vector_float3(Float(frame.width * 1.5), Float(frame.height * 1.5), 0)
+                vectorFloat3: vector_float3(Float(scale * frame.width), Float(scale * frame.height), 0)
             ),
             SKUniform(
                 name: "customTexture",
@@ -49,17 +53,17 @@ class GameScene: SKScene {
         reflectShader.uniforms = [
             SKUniform(
                 name: "size",
-                vectorFloat3: vector_float3(Float(frame.width), Float(frame.height), 0)
+                vectorFloat3: vector_float3(Float(scale * frame.width), Float(scale * frame.height), 0)
             ),
         ]
         // Add the shader to the sprite
         reflectNode.shader = reflectShader
 
-        
-        //just add sand sprite only to look good :-)
-        let beachNode = SKSpriteNode(imageNamed: "beach")
-        beachNode.position = CGPoint(x: frame.midX, y: frame.midY)
-        beachNode.size = self.size
-        addChild(beachNode)
+        /* I'm not sure why original author included the following code. It gets obscured by the above. Maybe in case the above fails, but why not add "sand" instead of "beach"? */
+//        //just add sand sprite only to look good :-)
+//        let beachNode = SKSpriteNode(imageNamed: "beach")
+//        beachNode.position = CGPoint(x: frame.midX, y: frame.midY)
+//        beachNode.size = self.size
+//        addChild(beachNode)
     }
 }
