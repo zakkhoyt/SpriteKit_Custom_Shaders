@@ -1,7 +1,6 @@
 # SpriteKit_Custom_Shaders
 
-This project was ported from on online tutorial found here:
-http://www.ymc.ch/de/blog/making-a-pixel-shader-for-ios8-with-sprite-kit/#comment-37010
+This project was ported from on online tutorial found [here](http://www.ymc.ch/de/blog/making-a-pixel-shader-for-ios8-with-sprite-kit/#comment-37010)
 
 Original was written in Objective-C using Xcode 8. 
 
