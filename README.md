@@ -2,7 +2,7 @@
 
 This project was ported from on online tutorial found [here](http://www.ymc.ch/de/blog/making-a-pixel-shader-for-ios8-with-sprite-kit/). It demonstrates how to use framgent shaders with SpriteKit, including uniforms.
 
-Original was written in Objective-C using Xcode 8. This project was written using Swift 3.0 and Xcode 10. The project is largely the same with a few exceptions:
+The original project was written in Objective-C using Xcode 8. This project ports the original to Swift 3.0 using Xcode 10. The project is largely the same with a few exceptions:
 
 * The SKScene is loaded programmatically, although the code to load directly from .sks remains, but is commented out
 * The scene is created programmatically to the size of its view. UIScreen.scale is used to calculate the size uniforms instead of relying on a zooming effect.
